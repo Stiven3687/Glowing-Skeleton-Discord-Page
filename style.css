@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&family=Noto+Sans+JP:wght@300&family=Poppins:wght@200;300;500;700&display=swap');
+
+:root{
+    --negro: #323131;
+    --gris: #eceaeb;
+    --rosa: #FC77B7;
+    --azul: #099ABE;
+    --amarillo: #F8FC9B;
+    --rosaClaro: #FC9BE2;
+    --degradado1: linear-gradient(90deg, var(--azul), var(--rosa));
+    --degradado2: linear-gradient(90deg, var(--amarillo), var(--rosaClaro));
+}
+
+*{
+    font-family: 'Fira Code', monospace;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--azul);
+    color: white;
+}
+
+html{
+    font-size: 62.4%;
+    overflow: hidden;
+}
+
+body{
+    background: whitesmoke;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2rem;
+    color: var(--negro);
+}
+
+header .separador{
+    color: var(--azul);
+}
+
+header .discord{
+    color: var(--negro);
+}
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--negro);
+}
+
+header .navbar a:hover{
+    color: var(--azul);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color: var(--azul);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media(max-width:1189px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+}
+
+@media(max-width:357px){
+    .separador, .discord{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:800px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+    font-weight: bold;
+    font: bold;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+section .content{
+    text-align: center;
+    font-size: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .name:hover{
+    color: var(--azul);
+}
+
+header .discord:hover{
+    color: var(--rosa)
+}
+
+.background{
+    filter: blur(5px);
+}
+
+.Inicio{
+    color: var(--negro);
+    font-family: 'Poppins', sans-serif;
+}
+
+section .texto{
+    font-weight: bold;
+    color: var(--gris);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+    font-style: normal;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: url(./assets/img/merchbgsoifjosirfjoisgvouggoejirgsoiengofina.jpg);
+}
+
+.button span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: var(--negro);
+}
+
+.button{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    width: 40%;
+    height: 5rem;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+    position: center;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--gris);
+    opacity: .5px; 
+}
