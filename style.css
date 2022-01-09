@@ -222,10 +222,10 @@ section .texto{
     font-style: normal;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-    background: url(./assets/img/merchbgsoifjosirfjoisgvouggoejirgsoiengofina.jpg);
+body, html{
+    background: url(./assets/img/merchbgsoifjosirfjoisgvouggoejirgsoiengofinablur3.png);
+    background-size: 100%;
+    background-size: 100%;
 }
 
 .button span{
@@ -250,3 +250,4 @@ body{
     background-color: var(--gris);
     opacity: .5px; 
 }
+
